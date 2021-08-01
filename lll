@@ -1,0 +1,29 @@
+{
+  "inbounds": [
+    {
+      "port": 443, // Vmess 协议服务器监听端口
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "b831381d-6324-4d53-ad4f-8cda48b30811" // id(UUID) 需要修改
+          }
+        ]
+      }
+    },
+    {
+      "port": 444, // SS 协议服务端监听端口
+      "protocol": "shadowsocks",
+      "settings": {
+        "method": "aes-128-gcm", // 加密方式
+        "password": "yuan.ga" //密码
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
