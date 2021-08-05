@@ -1,0 +1,17 @@
+添加SS：
+  
+  "inboundDetour": [
+   {
+     "protocol": "shadowsocks",
+     "port": 10086,
+     "settings": {
+      "method": "aes-128-gcm",
+      "password": "password",
+      "udp": false
+     }
+    }
+  ],
+
+SS 的配置添加在config.josn文件里，位置没有强行规定，个人比较喜欢加在Vmess协议(整段)后面，主要是加进去的内容符合json文件的格式标准，不然配置文件解析出错，会造成V2ray启动不成功。
+
+注意：修改config.json文件后如果没有active，可能是因为什么东西在缓存里占用了，reboot一下再看
